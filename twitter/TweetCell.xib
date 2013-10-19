@@ -1,10 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4447" systemVersion="13A451" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3671"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="100" id="vaD-26-ZaW" customClass="TweetCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vaD-26-ZaW" id="DMx-UZ-Gdo">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEb-XF-ysI">
+                        <rect key="frame" x="8" y="5" width="90" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="abC-Hq-oRV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Steffen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PW-cG-M6x">
+                        <rect key="frame" x="106" y="5" width="90" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="Fkj-2Z-oCC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@JustinDSN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-w2-wAZ">
+                        <rect key="frame" x="204" y="5" width="90" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-pD-JBy">
+                        <rect key="frame" x="302" y="5" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="257-MV-pKd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test tweet" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="209" translatesAutoresizingMaskIntoConstraints="NO" id="5Ha-0U-zhr">
+                        <rect key="frame" x="106" y="20" width="209" height="75"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rEb-XF-ysI" firstAttribute="leading" secondItem="DMx-UZ-Gdo" secondAttribute="leading" constant="8" id="7Bo-F2-Y8t"/>
+                    <constraint firstItem="5PW-cG-M6x" firstAttribute="top" secondItem="Uad-w2-wAZ" secondAttribute="top" id="DqH-cV-IOR"/>
+                    <constraint firstAttribute="bottom" secondItem="5PW-cG-M6x" secondAttribute="bottom" constant="73" id="JjD-QY-Ogc"/>
+                    <constraint firstAttribute="trailing" secondItem="4xT-pD-JBy" secondAttribute="trailing" constant="-24" id="MKj-OA-Sk5"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="top" secondItem="Uad-w2-wAZ" secondAttribute="top" id="S0l-E8-chw"/>
+                    <constraint firstItem="rEb-XF-ysI" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="5" id="Y5H-wg-8x5"/>
+                    <constraint firstAttribute="bottom" secondItem="rEb-XF-ysI" secondAttribute="bottom" constant="4" id="Zsf-2U-aWD"/>
+                    <constraint firstItem="5Ha-0U-zhr" firstAttribute="bottom" secondItem="rEb-XF-ysI" secondAttribute="bottom" id="cVM-6e-4FX"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="baseline" secondItem="Uad-w2-wAZ" secondAttribute="baseline" id="dD3-8R-0yv"/>
+                    <constraint firstItem="5PW-cG-M6x" firstAttribute="leading" secondItem="rEb-XF-ysI" secondAttribute="trailing" constant="8" symbolic="YES" id="fMO-aB-qY3"/>
+                    <constraint firstItem="Uad-w2-wAZ" firstAttribute="leading" secondItem="5PW-cG-M6x" secondAttribute="trailing" constant="8" symbolic="YES" id="ibd-IX-gcg"/>
+                    <constraint firstItem="5PW-cG-M6x" firstAttribute="baseline" secondItem="Uad-w2-wAZ" secondAttribute="baseline" id="lQJ-Og-ah1"/>
+                    <constraint firstItem="5PW-cG-M6x" firstAttribute="top" secondItem="rEb-XF-ysI" secondAttribute="top" id="lfm-hd-OvE"/>
+                    <constraint firstAttribute="trailing" secondItem="5Ha-0U-zhr" secondAttribute="trailing" constant="5" id="mi8-nF-VV4"/>
+                    <constraint firstItem="5Ha-0U-zhr" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="20" symbolic="YES" id="noI-Kk-doV"/>
+                    <constraint firstItem="5Ha-0U-zhr" firstAttribute="leading" secondItem="rEb-XF-ysI" secondAttribute="trailing" constant="8" symbolic="YES" id="pDj-XU-7gf"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="leading" secondItem="Uad-w2-wAZ" secondAttribute="trailing" constant="8" symbolic="YES" id="tZE-97-rrQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="5PW-cG-M6x" id="ehm-nz-kLs"/>
+                <outlet property="profileImageView" destination="rEb-XF-ysI" id="L8G-VN-AWD"/>
+                <outlet property="screenNameLabel" destination="Uad-w2-wAZ" id="EhJ-SK-DG9"/>
+                <outlet property="textLabel" destination="5Ha-0U-zhr" id="dcF-PY-leJ"/>
+                <outlet property="timestampLabel" destination="4xT-pD-JBy" id="Au2-EK-sLO"/>
+            </connections>
+        </tableViewCell>
     </objects>
 </document>

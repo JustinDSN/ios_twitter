@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TweetCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 
 @end

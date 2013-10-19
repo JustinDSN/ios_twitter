@@ -7,6 +7,7 @@
 //
 
 #import "TimelineVC.h"
+#import "TweetCell.h"
 
 @interface TimelineVC ()
 
@@ -33,6 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UINib *customNib = [UINib nibWithNibName:@"TweetCell" bundle:nil];
+    [self.tableView registerNib: customNib forCellReuseIdentifier:@"TweetCell"];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
 
@@ -63,14 +67,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    static NSString *CellIdentifier = @"TweetCell";
+    TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     Tweet *tweet = self.tweets[indexPath.row];
     cell.textLabel.text = tweet.text;
+    cell.nameLabel.text = tweet.name;
+    cell.screenNameLabel.text = tweet.screen_name;
+    cell.timestampLabel.text = tweet.timestamp;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100.0f;
 }
 
 /*
