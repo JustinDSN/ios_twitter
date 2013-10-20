@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.statusTextView becomeFirstResponder];
+    self.statusTextView.placeholder = @"What's happening?";
 }
 
 - (void)didReceiveMemoryWarning

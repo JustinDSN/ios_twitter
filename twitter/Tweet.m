@@ -19,11 +19,11 @@
 }
 
 - (NSString *)screen_name {
-    return [self.data valueOrNilForKeyPath:@"screen_name"];
+    return [self.data valueOrNilForKeyPath:@"user.screen_name"];
 }
 
 - (NSString *)name {
-    return [self.data valueOrNilForKeyPath:@"name"];
+    return [self.data valueOrNilForKeyPath:@"user.name"];
 }
 
 - (NSString *)timestamp {

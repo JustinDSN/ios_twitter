@@ -75,7 +75,7 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     Tweet *tweet = self.tweets[indexPath.row];
-    cell.textLabel.text = tweet.text;
+    cell.statusLabel.text = tweet.text;
     cell.nameLabel.text = tweet.name;
     cell.screenNameLabel.text = tweet.screen_name;
     cell.timestampLabel.text = @"8h"; //tweet.timestamp;

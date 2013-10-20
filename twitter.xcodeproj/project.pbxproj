@@ -32,6 +32,7 @@
 		4A2D263314064B2DA5BDFE0E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC1DF52D3B94E9285F4C2F7 /* libPods.a */; };
 		D0057B2B181334380089F0A3 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0057B29181334380089F0A3 /* ComposeViewController.m */; };
 		D0057B2C181334380089F0A3 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0057B2A181334380089F0A3 /* ComposeViewController.xib */; };
+		D05D967918144F5E00DF1650 /* UIPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05D967818144F5E00DF1650 /* UIPlaceholderTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		D0057B28181334380089F0A3 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		D0057B29181334380089F0A3 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		D0057B2A181334380089F0A3 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		D05D967718144F5E00DF1650 /* UIPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceholderTextView.h; sourceTree = "<group>"; };
+		D05D967818144F5E00DF1650 /* UIPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceholderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,8 @@
 				42CC89BD17B0F02600B6D34B /* TweetCell.h */,
 				42CC89BE17B0F02600B6D34B /* TweetCell.m */,
 				42CC89C017B0F03E00B6D34B /* TweetCell.xib */,
+				D05D967718144F5E00DF1650 /* UIPlaceholderTextView.h */,
+				D05D967818144F5E00DF1650 /* UIPlaceholderTextView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				42CC89AE17B0C7A600B6D34B /* User.m in Sources */,
 				42CC89B117B0C7B800B6D34B /* Tweet.m in Sources */,
 				42CC89B417B0D63C00B6D34B /* RestObject.m in Sources */,
+				D05D967918144F5E00DF1650 /* UIPlaceholderTextView.m in Sources */,
 				42CC895D17AF6FBB00B6D34B /* TimelineVC.m in Sources */,
 				D0057B2B181334380089F0A3 /* ComposeViewController.m in Sources */,
 				42CC893C17AF4C6B00B6D34B /* AppDelegate.m in Sources */,
