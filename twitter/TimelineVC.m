@@ -8,6 +8,8 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import <UIImageView+AFNetworking.h>
+#import "ComposeViewController.h"
 
 @interface TimelineVC ()
 
@@ -39,6 +41,8 @@
     [self.tableView registerNib: customNib forCellReuseIdentifier:@"TweetCell"];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onComposeButton)];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -74,7 +78,8 @@
     cell.textLabel.text = tweet.text;
     cell.nameLabel.text = tweet.name;
     cell.screenNameLabel.text = tweet.screen_name;
-    cell.timestampLabel.text = tweet.timestamp;
+    cell.timestampLabel.text = @"8h"; //tweet.timestamp;
+    [cell.profileImageView setImageWithURL:[NSURL URLWithString: tweet.profile_image_url]];
     
     return cell;
 }
@@ -141,6 +146,13 @@
  */
 
 #pragma mark - Private methods
+
+- (void)onComposeButton {
+    //Do something
+    NSLog(@"ComposeButtonClicked");
+    ComposeViewController *composeVC = [[ComposeViewController alloc] init];
+    [self presentViewController:composeVC animated:YES completion:nil];
+}
 
 - (void)onSignOutButton {
     [User setCurrentUser:nil];

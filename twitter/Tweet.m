@@ -15,7 +15,7 @@
 }
 
 - (NSString *)profile_image_url {
-    return [self.data valueOrNilForKeyPath:@"profile_image_url"];
+    return [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
 }
 
 - (NSString *)screen_name {
