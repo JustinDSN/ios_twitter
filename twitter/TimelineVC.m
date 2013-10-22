@@ -10,6 +10,7 @@
 #import "TweetCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "ComposeViewController.h"
+#import "TweetViewController.h"
 
 @interface TimelineVC ()
 
@@ -134,8 +135,13 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Tweet *tweet = self.tweets[indexPath.row];
+    TweetViewController *tvc = [[TweetViewController alloc] initWithNibName:@"TweetViewController" andModel:tweet bundle:nil];
+    
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 
 /*
