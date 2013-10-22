@@ -78,7 +78,7 @@
     cell.statusLabel.text = tweet.text;
     cell.nameLabel.text = tweet.name;
     cell.screenNameLabel.text = tweet.screen_name;
-    cell.timestampLabel.text = @"8h"; //tweet.timestamp;
+    cell.timestampLabel.text = tweet.relative_timestamp;
     [cell.profileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profile_image_url]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         cell.profileImageView.image = image;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {

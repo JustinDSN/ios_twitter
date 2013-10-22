@@ -22,20 +22,20 @@
                             <constraint firstAttribute="width" constant="48" id="x2r-Eb-8m3"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Steffen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PW-cG-M6x">
-                        <rect key="frame" x="64" y="5" width="74" height="14"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Justin Steffen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PW-cG-M6x">
+                        <rect key="frame" x="64" y="5" width="94" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@JustinDSN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-w2-wAZ">
-                        <rect key="frame" x="146" y="5" width="67" height="14"/>
+                        <rect key="frame" x="166" y="5" width="95" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-pD-JBy">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="8h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-pD-JBy">
                         <rect key="frame" x="286" y="5" width="14" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
@@ -50,15 +50,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="5Ha-0U-zhr" firstAttribute="leading" secondItem="rEb-XF-ysI" secondAttribute="trailing" constant="8" id="2Nv-Gi-yFd"/>
-                    <constraint firstItem="4xT-pD-JBy" firstAttribute="leading" secondItem="Uad-w2-wAZ" secondAttribute="trailing" constant="73" id="37U-Nk-soC"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="leading" secondItem="Uad-w2-wAZ" secondAttribute="trailing" constant="25" id="37U-Nk-soC"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="baseline" secondItem="5PW-cG-M6x" secondAttribute="baseline" id="BeU-Qd-3rO"/>
                     <constraint firstItem="5PW-cG-M6x" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="5" id="Ibc-wx-bpy"/>
+                    <constraint firstAttribute="trailing" secondItem="4xT-pD-JBy" secondAttribute="trailing" constant="20" id="Icq-Ef-Fbv"/>
                     <constraint firstItem="Uad-w2-wAZ" firstAttribute="baseline" secondItem="5PW-cG-M6x" secondAttribute="baseline" id="Jr8-55-IZz"/>
                     <constraint firstItem="rEb-XF-ysI" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="5" id="ZDT-gq-Sgg"/>
                     <constraint firstAttribute="trailing" secondItem="5Ha-0U-zhr" secondAttribute="trailing" constant="12" id="aiT-bh-TzG"/>
                     <constraint firstItem="Uad-w2-wAZ" firstAttribute="leading" secondItem="5PW-cG-M6x" secondAttribute="trailing" constant="8" id="hUD-PJ-vpf"/>
-                    <constraint firstItem="Uad-w2-wAZ" firstAttribute="baseline" secondItem="4xT-pD-JBy" secondAttribute="baseline" id="jW5-1i-ujf"/>
                     <constraint firstItem="5PW-cG-M6x" firstAttribute="leading" secondItem="rEb-XF-ysI" secondAttribute="trailing" constant="8" id="mab-IW-l3e"/>
                     <constraint firstItem="rEb-XF-ysI" firstAttribute="leading" secondItem="DMx-UZ-Gdo" secondAttribute="leading" constant="8" id="n3q-29-ARO"/>
+                    <constraint firstItem="Uad-w2-wAZ" firstAttribute="height" secondItem="4xT-pD-JBy" secondAttribute="height" id="ngd-i8-Cce"/>
+                    <constraint firstItem="Uad-w2-wAZ" firstAttribute="width" secondItem="5PW-cG-M6x" secondAttribute="width" id="rID-F0-pdu"/>
+                    <constraint firstItem="Uad-w2-wAZ" firstAttribute="height" secondItem="5PW-cG-M6x" secondAttribute="height" id="vWB-T2-eJC"/>
                     <constraint firstItem="5Ha-0U-zhr" firstAttribute="top" secondItem="5PW-cG-M6x" secondAttribute="bottom" constant="1" id="ze6-Kk-vCT"/>
                 </constraints>
             </tableViewCellContentView>
