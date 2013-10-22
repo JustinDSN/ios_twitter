@@ -19,30 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6a-PR-8HI">
-                    <rect key="frame" x="20" y="64" width="48" height="48"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b6a-PR-8HI">
+                    <rect key="frame" x="20" y="84" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="J0d-hY-U1J"/>
                         <constraint firstAttribute="width" constant="48" id="Wsh-dV-ViU"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Justin Steffen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-3m-j4Y">
-                    <rect key="frame" x="78" y="64" width="222" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Steffen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-3m-j4Y">
+                    <rect key="frame" x="78" y="84" width="222" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="@JustinDSN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gj-Mm-N5p">
-                    <rect key="frame" x="76" y="93" width="224" height="16"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@JustinDSN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gj-Mm-N5p">
+                    <rect key="frame" x="76" y="113" width="224" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-JQ-tJQ" customClass="UIPlaceholderTextView">
-                    <rect key="frame" x="20" y="132" width="280" height="200"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-JQ-tJQ" customClass="UIPlaceholderTextView">
+                    <rect key="frame" x="20" y="152" width="280" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -62,7 +62,10 @@
                 <constraint firstItem="9gj-Mm-N5p" firstAttribute="leading" secondItem="b6a-PR-8HI" secondAttribute="trailing" constant="8" id="UJM-i8-NPa"/>
                 <constraint firstItem="9gj-Mm-N5p" firstAttribute="top" secondItem="KlW-3m-j4Y" secondAttribute="bottom" constant="8" id="V81-GP-j01"/>
                 <constraint firstItem="C1Z-JQ-tJQ" firstAttribute="top" secondItem="b6a-PR-8HI" secondAttribute="bottom" constant="20" id="aHP-Jp-wOr"/>
+                <constraint firstItem="KlW-3m-j4Y" firstAttribute="top" secondItem="1" secondAttribute="top" constant="84" id="cEs-aW-nU4"/>
                 <constraint firstAttribute="trailing" secondItem="C1Z-JQ-tJQ" secondAttribute="trailing" constant="20" id="cpq-d8-gpv"/>
+                <constraint firstItem="9gj-Mm-N5p" firstAttribute="top" secondItem="KlW-3m-j4Y" secondAttribute="bottom" constant="8" id="dSl-6g-F7E"/>
+                <constraint firstItem="b6a-PR-8HI" firstAttribute="top" secondItem="1" secondAttribute="top" constant="84" id="iE6-JX-WPk"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
