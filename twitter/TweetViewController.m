@@ -9,6 +9,7 @@
 #import "TweetViewController.h"
 #import "Tweet.h"
 #import <UIImageView+AFNetworking.h>
+#import "TwitterClient.h"
 
 @interface TweetViewController ()
 
@@ -61,6 +62,12 @@
 
 - (IBAction)onRetweet:(id)sender {
     NSLog(@"onRetweet");
+    [[TwitterClient instance] retweet:self.currentTweet.tweetId success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Retweet Success!");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 - (IBAction)onFavorite:(id)sender {
