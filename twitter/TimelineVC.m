@@ -156,7 +156,8 @@
     //Do something
     NSLog(@"ComposeButtonClicked");
     ComposeViewController *composeVC = [[ComposeViewController alloc] init];
-    [self presentViewController:composeVC animated:YES completion:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: composeVC];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void)onSignOutButton {

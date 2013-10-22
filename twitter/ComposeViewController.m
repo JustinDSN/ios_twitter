@@ -42,7 +42,7 @@
 }
 
 - (void)onCancelButton {
-    NSLog(@"onCancelButton");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

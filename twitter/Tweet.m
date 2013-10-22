@@ -33,7 +33,6 @@
 
 -(NSString *)relative_timestamp {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    //Mon, 29 Oct 2012 12:24:50 +0000
     [df setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
     [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     NSDate *tweetDate = [df dateFromString:self.timestamp];
