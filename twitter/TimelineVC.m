@@ -79,12 +79,17 @@
     cell.nameLabel.text = tweet.name;
     cell.screenNameLabel.text = tweet.screen_name;
     cell.timestampLabel.text = @"8h"; //tweet.timestamp;
-    [cell.profileImageView setImageWithURL:[NSURL URLWithString: tweet.profile_image_url]];
+    [cell.profileImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:tweet.profile_image_url]] placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        cell.profileImageView.image = image;
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"%@", error);
+    }];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     return 100.0f;
 }
 

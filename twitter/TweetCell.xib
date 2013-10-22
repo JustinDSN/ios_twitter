@@ -35,8 +35,8 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-pD-JBy">
-                        <rect key="frame" x="221" y="5" width="14" height="14"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xT-pD-JBy">
+                        <rect key="frame" x="286" y="5" width="14" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="5Ha-0U-zhr" firstAttribute="leading" secondItem="rEb-XF-ysI" secondAttribute="trailing" constant="8" id="2Nv-Gi-yFd"/>
-                    <constraint firstItem="4xT-pD-JBy" firstAttribute="leading" secondItem="Uad-w2-wAZ" secondAttribute="trailing" constant="8" id="37U-Nk-soC"/>
+                    <constraint firstItem="4xT-pD-JBy" firstAttribute="leading" secondItem="Uad-w2-wAZ" secondAttribute="trailing" constant="73" id="37U-Nk-soC"/>
                     <constraint firstItem="5PW-cG-M6x" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="5" id="Ibc-wx-bpy"/>
                     <constraint firstItem="Uad-w2-wAZ" firstAttribute="baseline" secondItem="5PW-cG-M6x" secondAttribute="baseline" id="Jr8-55-IZz"/>
                     <constraint firstItem="rEb-XF-ysI" firstAttribute="top" secondItem="DMx-UZ-Gdo" secondAttribute="top" constant="5" id="ZDT-gq-Sgg"/>
