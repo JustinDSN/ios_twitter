@@ -8,6 +8,7 @@
 
 #import "ComposeViewController.h"
 #import <UIImageView+AFNetworking.h>
+#import "User.h"
 
 @interface ComposeViewController ()
 
@@ -40,6 +41,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancelButton)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancelButton)];
     
     if (self.current_status.length == 0) {
         self.statusTextView.placeholder = @"What's happening?";
@@ -48,7 +50,9 @@
         self.statusTextView.text = self.current_status;
     }
     
-    [self.profileImageView setImageWithURL:[NSURL URLWithString: @"http://a0.twimg.com/profile_images/2452709870/wo2h8r0qy8d5lsxe5lgd_normal.png"]];
+    [self.profileImageView setImageWithURL:[NSURL URLWithString: [[User currentUser] profile_image_url]]];
+    self.screenNameLabel.text = [[User currentUser] screen_name];
+    self.nameLabel.text = [[User currentUser] name];
     
     [self.statusTextView becomeFirstResponder];
 }

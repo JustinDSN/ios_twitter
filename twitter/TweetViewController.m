@@ -60,7 +60,7 @@
 - (IBAction)onReply:(id)sender {
     NSLog(@"onReply");
     NSString *status = [NSString stringWithFormat:@"%@ ", self.currentTweet.screen_name];
-    ComposeViewController *composeVC = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" andStatus:status inReplyToTweetId:self.currentTweet.tweet_id bundle:nil];
+    ComposeViewController *composeVC = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" andStatus:status  inReplyToTweetId:self.currentTweet.tweet_id bundle:nil];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: composeVC];
     [self presentViewController:nvc animated:YES completion:nil];
 }
