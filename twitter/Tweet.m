@@ -11,7 +11,7 @@
 
 @implementation Tweet
 
-- (NSString *)tweetId {
+- (NSString *)tweet_id {
     return [self.data valueOrNilForKeyPath:@"id"];
 }
 

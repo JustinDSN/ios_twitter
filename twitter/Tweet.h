@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestObject.h"
 
 @interface Tweet : RestObject
 
-@property (nonatomic, strong, readonly) NSString *tweetId;
+@property (nonatomic, strong, readonly) NSString *tweet_id;
+@property (nonatomic, strong, readonly) NSString *in_reply_to_status_id;
 @property (nonatomic, strong, readonly) NSString *text;
 @property (nonatomic, strong, readonly) NSString *profile_image_url;
 @property (nonatomic, strong, readonly) NSString *screen_name;

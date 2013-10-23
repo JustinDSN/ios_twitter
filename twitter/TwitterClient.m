@@ -65,11 +65,28 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [self getPath:@"1.1/statuses/home_timeline.json" parameters:params success:success failure:failure];
 }
 
-- (void)retweet:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+- (void)retweetWithTweetId:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     NSString *path = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/retweet/%@.json", tweetId];
     [self postPath:path parameters:nil success:success failure:failure];
     
+}
+
+- (void)updateStatus:(NSString *)status success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    
+    [params setObject:status forKey:@"status"];
+    
+    [self postPath:@"https://api.twitter.com/1.1/statuses/update.json" parameters:params success:success failure:failure];
+}
+
+- (void)replyToTweetId:(NSString *)tweetId withStatus:(NSString *) status success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    
+    [params setObject:status forKey:@"status"];
+    [params setObject:tweetId forKey:@"in_reply_to_status_id"];
+    
+    [self postPath:@"https://api.twitter.com/1.1/statuses/update.json" parameters:params success:success failure:failure];
 }
 
 #pragma mark - Private methods

@@ -58,15 +58,21 @@
 
 - (IBAction)onReply:(id)sender {
     NSLog(@"onReply");
+    [[TwitterClient instance] replyToTweetId:self.currentTweet.tweet_id withStatus:@"@roguelynn This is a test from my iOS class." success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Reply Success!");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Reply Error! Error: %@", error);
+    }];
 }
 
 - (IBAction)onRetweet:(id)sender {
     NSLog(@"onRetweet");
-    [[TwitterClient instance] retweet:self.currentTweet.tweetId success:^(AFHTTPRequestOperation *operation, id response) {
+    [[TwitterClient instance] retweetWithTweetId:self.currentTweet.tweet_id success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Retweet Success!");
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
+        NSLog(@"Retweet Error! Error: %@", error);
     }];
 }
 
