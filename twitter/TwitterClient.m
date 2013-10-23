@@ -66,10 +66,8 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
 }
 
 - (void)retweetWithTweetId:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    
     NSString *path = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/retweet/%@.json", tweetId];
     [self postPath:path parameters:nil success:success failure:failure];
-    
 }
 
 - (void)updateStatus:(NSString *)status success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
@@ -87,6 +85,11 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [params setObject:tweetId forKey:@"in_reply_to_status_id"];
     
     [self postPath:@"https://api.twitter.com/1.1/statuses/update.json" parameters:params success:success failure:failure];
+}
+
+- (void)favoriteWithTweetId:(NSString *)tweetId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSString *path = [NSString stringWithFormat:@"https://api.twitter.com/1/favorites/create/%@.json", tweetId];
+    [self postPath:path parameters:nil success:success failure:failure];
 }
 
 #pragma mark - Private methods

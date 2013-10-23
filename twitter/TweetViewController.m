@@ -77,5 +77,11 @@
 
 - (IBAction)onFavorite:(id)sender {
     NSLog(@"onFavorite");
+    [[TwitterClient instance] favoriteWithTweetId:self.currentTweet.tweet_id success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Favorite Success!");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Favorite Error! Error: %@", error);
+    }];
 }
 @end

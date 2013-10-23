@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import <UIImageView+AFNetworking.h>
 #import "User.h"
+#import "TwitterClient.h"
 
 @interface ComposeViewController ()
 
@@ -41,7 +42,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancelButton)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancelButton)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(onDoneButton)];
     
     if (self.current_status.length == 0) {
         self.statusTextView.placeholder = @"What's happening?";
@@ -67,14 +68,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)onTweetButton {
-    NSLog(@"onTweetButton");
-//    [[TwitterClient instance] replyToTweetId:self.currentTweet.tweet_id withStatus:@"@roguelynn This is a test from my iOS class." success:^(AFHTTPRequestOperation *operation, id response) {
-//        NSLog(@"Reply Success!");
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Reply Error! Error: %@", error);
-//    }];
+-(void)onDoneButton {
+    NSLog(@"onDoneButton");
+    
+    if (self.in_reply_to_status_id.length > 0) {
+        NSLog(@"Reply Starting");
+        [[TwitterClient instance] replyToTweetId:self.in_reply_to_status_id withStatus:self.statusTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"Reply Success!");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Reply Error! Error: %@", error);
+        }];
+    }
+    else {
+        NSLog(@"Update Status Starting");
+        [[TwitterClient instance] updateStatus:self.statusTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+            NSLog(@"Update Status Success!");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Update Status Error! Error: %@", error);
+        }];
+    }
 }
 
 @end
