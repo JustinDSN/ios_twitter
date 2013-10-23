@@ -10,6 +10,7 @@
 #import "Tweet.h"
 #import <UIImageView+AFNetworking.h>
 #import "TwitterClient.h"
+#import "ComposeViewController.h"
 
 @interface TweetViewController ()
 
@@ -58,12 +59,10 @@
 
 - (IBAction)onReply:(id)sender {
     NSLog(@"onReply");
-    [[TwitterClient instance] replyToTweetId:self.currentTweet.tweet_id withStatus:@"@roguelynn This is a test from my iOS class." success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"Reply Success!");
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Reply Error! Error: %@", error);
-    }];
+    NSString *status = [NSString stringWithFormat:@"%@ ", self.currentTweet.screen_name];
+    ComposeViewController *composeVC = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" andStatus:status inReplyToTweetId:self.currentTweet.tweet_id bundle:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: composeVC];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (IBAction)onRetweet:(id)sender {

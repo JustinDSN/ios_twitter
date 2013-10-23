@@ -159,7 +159,6 @@
 #pragma mark - Private methods
 
 - (void)onComposeButton {
-    //Do something
     NSLog(@"ComposeButtonClicked");
     ComposeViewController *composeVC = [[ComposeViewController alloc] init];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController: composeVC];
